@@ -39,17 +39,17 @@ pipeline{
         }    
    }
    
-  stage ('SonarQube Analysis') {
-    steps {
-      container('build-agent'){
-      withSonarQubeEnv('sonar') {           
-				dir('app'){
-          sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar'
-          }
-        }
-    }
-    }
- }
+//   stage ('SonarQube Analysis') {
+//     steps {
+//       container('build-agent'){
+//       withSonarQubeEnv('sonar') {           
+// 				dir('app'){
+//           sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar'
+//           }
+//         }
+//     }
+//     }
+//  }
 
     stage ('Artifactory configuration') {
             steps {
