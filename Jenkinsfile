@@ -23,7 +23,8 @@ pipeline{
   stage ('Checkout SCM'){
         steps {
           container('build-agent'){
-          checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'loginapp', url: 'https://careem111@git@github.com:careem111/loginapp-integration.git']]])
+          // checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'loginapp', url: 'https://github.com/careem111/loginapp-integration.git']]])
+          git branch: 'main',    credentialsId: 'loginapp',    url: 'ssh://git@github.com:careem111/loginapp-integration.git'
         }
       }
    }
