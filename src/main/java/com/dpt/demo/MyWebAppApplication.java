@@ -1,4 +1,4 @@
-package com.krishna.demo;
+package com.dpt.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

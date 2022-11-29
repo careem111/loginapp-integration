@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body bgcolor="silver">
-    <img src="https://dpt-web-data.s3.amazonaws.com/iwayQ_logo_brand.jpg" height="180" width="300" alt="animal image">
 
 <center>${errorMessage }</center>
 
